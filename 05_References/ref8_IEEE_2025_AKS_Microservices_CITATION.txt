@@ -1,0 +1,6 @@
+﻿CITATION [8]
+============
+Title   : Scalable Microservices Architecture Using Azure Kubernetes Service (AKS)
+Source  : IEEE Conference Publication, 2025
+URL     : https://ieeexplore.ieee.org/document/11157964
+NOTE    : IEEE Xplore - requires institutional login or IEEE membership to download.

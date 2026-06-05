@@ -1,0 +1,7 @@
+﻿CITATION [6]
+============
+Author  : Mercy Olaosegba
+Title   : Kubernetes-Based Orchestration Performance Benchmarking in the Cloud
+Source  : ResearchGate, February 2025
+URL     : https://www.researchgate.net/publication/392559426
+NOTE    : Open URL in browser and click Download to get PDF.

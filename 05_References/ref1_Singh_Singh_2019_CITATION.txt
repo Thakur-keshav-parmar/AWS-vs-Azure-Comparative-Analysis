@@ -1,0 +1,7 @@
+﻿CITATION [1] — KEEP YOUR PDF
+==============================
+Authors : Charanjeet Singh and Dr. Tripat Deep Singh
+Title   : A 3-Level Multifactor Authentication Scheme for Cloud Computing
+Journal : IJCET, Vol. 10, Issue 1, Jan-Feb 2019, pp. 184-195
+URL     : http://www.iaeme.com/IJCET/issues.asp?JType=IJCET&VType=10&IType=1
+NOTE    : Please copy your ssrn-3537621.pdf here and rename to ref1_Singh_Singh_2019.pdf

@@ -1,0 +1,7 @@
+﻿CITATION [4]
+============
+Author  : Praveen Borra
+Title   : Comparison and Analysis of Leading Cloud Service Providers (AWS, Azure and GCP)
+Journal : International Journal of Advanced Research in Engineering and Technology (IJARET), vol. 15, no. 3, pp. 266-278, 2024
+URL     : https://www.researchgate.net/publication/381157365
+NOTE    : Search title on ResearchGate or Google Scholar to download PDF.

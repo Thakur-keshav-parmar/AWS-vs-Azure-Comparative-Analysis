@@ -1,0 +1,8 @@
+﻿CITATION [3]
+============
+Authors : R. S. Auliya, Y.-L. Lee, C.-C. Chen, D. Liang, and W.-J. Wang
+Title   : Analysis and Prediction of Virtual Machine Boot Time on Virtualized Computing Environments
+Journal : Journal of Cloud Computing (Springer), vol. 13, art. 80, April 2024
+DOI     : 10.1186/s13677-024-00646-4
+URL     : https://link.springer.com/article/10.1186/s13677-024-00646-4
+NOTE    : Open access but Springer blocks automated download. Open URL in browser to download PDF.

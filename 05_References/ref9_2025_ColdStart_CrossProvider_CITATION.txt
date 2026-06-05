@@ -1,0 +1,6 @@
+﻿CITATION [9]
+============
+Title   : Cold Start Performance in Serverless Computing: A Comprehensive Cross-Provider Analysis of Language-Specific Optimizations and Container-Based Mitigation Strategies
+Source  : ResearchGate, September 2025
+URL     : https://www.researchgate.net/publication/395466517
+NOTE    : Open URL in browser and click Download to get PDF.

@@ -1,0 +1,20 @@
+# ─── CREDENTIALS — NEVER COMMIT ──────────────────────────────────────────────
+CREDENTIALS_KEEP_PRIVATE/
+*.csv
+*.pem
+*.key
+.env
+.env.*
+
+# ─── BINARY FILES (may contain personal info on cover pages) ─────────────────
+*.pdf
+*.docx
+*.pptx
+*.mp4
+
+# ─── OS FILES ─────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+__pycache__/
+*.pyc

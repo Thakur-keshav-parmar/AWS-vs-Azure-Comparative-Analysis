@@ -1,0 +1,6 @@
+﻿CITATION [7]
+============
+Title   : Serverless Cloud Computing: Navigating Challenges and Exploring Future Opportunities
+Source  : IEEE Conference Publication, 2025
+URL     : https://ieeexplore.ieee.org/document/10868483
+NOTE    : IEEE Xplore - requires institutional login or IEEE membership to download.
