@@ -1,63 +1,91 @@
-# AWS vs Azure Comparative Analysis — Research Archive
+# ☁️ AWS vs Azure — Comparative Analysis
 
-**Topic:** Comparative Analysis of Compute Services of AWS & Azure  
-**Level:** Postgraduate Research (Cloud Computing)  
-**Completed:** 2026
+![AWS](https://img.shields.io/badge/AWS-EC2%20%7C%20Lambda%20%7C%20EKS-orange?logo=amazonaws)
+![Azure](https://img.shields.io/badge/Azure-VM%20%7C%20Functions%20%7C%20AKS-blue?logo=microsoftazure)
+![Research](https://img.shields.io/badge/Type-Empirical%20Research-purple)
+![License](https://img.shields.io/badge/License-MIT-green)
 
----
-
-## Folder Structure
-
-| Folder | Contents |
-|---|---|
-| `01_Research_Paper/` | Final research paper + proposal |
-| `02_Presentation/` | Final PPT (13 slides) + examiner reference sheet |
-| `04_Experimental_Data/` | Excel workbooks (EC2 logs, Lambda data, EKS/AKS timings) |
-| `05_References/` | All 18 reference PDFs and citation text files |
-| `06_Supporting_Documents/` | Step-by-step walkthrough, setup notes, research guide |
-| `08_Session_Summary/` | Full session notes, decisions log, AWS/Azure cleanup commands |
+> **Hands-on empirical benchmarking of AWS vs Azure** across three cloud service layers — IaaS, FaaS, and CaaS — using real CLI experiments on live accounts. Raw data included for reproducibility.
 
 ---
 
-## Research Summary
+## 📊 Key Results at a Glance
 
-**Title:** Comparative Analysis of Compute Services of AWS & Azure
+| Experiment | AWS | Azure | Winner |
+|---|---|---|---|
+| Windows VM Boot Time | 53.5 sec | 95.5 sec | **AWS** (44% faster) |
+| Linux VM Boot Time | 156.5 sec | 63.1 sec | **Azure** (148% faster) |
+| Serverless Cold Start | 628 ms | 621 ms | **TIE** |
+| Serverless Cost (Python) | $0.00000145 | $0.00001700 | **AWS** (12× cheaper) |
+| Kubernetes Provision Time | 13 min 11 sec | 5 min 21 sec | **Azure** (2.46× faster) |
+| Kubernetes Control Plane Cost | $0.10/hr | FREE | **Azure** |
 
-**Abstract:** Hands-on empirical benchmarking of AWS and Azure across three cloud service layers
-(IaaS, FaaS, CaaS) using real CLI-based experiments on live accounts.
-
-**3 Experiments:**
-1. **VM Boot Time** — 20 EC2 t3.micro vs 20 Azure D2s_v3 VMs (Windows + Linux)
-2. **Serverless Cold Start & Cost** — 10 Lambda vs 10 Azure Functions (6 runtimes)
-3. **Kubernetes Provisioning** — 10 EKS vs 10 AKS clusters (K8s v1.34)
-
-**Key Results:**
-
-| Metric | Winner | Margin |
-|---|---|---|
-| Windows VM Boot | AWS EC2 | 44% faster (53.5s vs 95.5s) |
-| Linux VM Boot | Azure VM | 148% faster (63.1s vs 156.5s) |
-| Cold Start Latency | TIE | 628ms vs 621ms |
-| Serverless Cost | AWS Lambda | Up to 12× cheaper |
-| K8s Provision Speed | Azure AKS | 2.46× faster (5m21s vs 13m11s) |
-| K8s Control Plane Cost | Azure AKS | FREE vs $0.10/hr |
-
-**Verdict:** Hybrid strategy — AWS Lambda for serverless, Azure AKS for Kubernetes.
+**Verdict:** Use **AWS Lambda** for serverless workloads. Use **Azure AKS** for Kubernetes.
 
 ---
 
-## How to Use This Repository
+## 🧪 Three Experiments
 
-- **Researchers** — Use the experimental data in `04_Experimental_Data/` for comparison benchmarks
-- **Students** — Reference methodology in `01_Research_Paper/` and `06_Supporting_Documents/`
-- **Practitioners** — See `08_Session_Summary/AWS_Azure_Cleanup_Commands.md` for real CLI workflows
+### Experiment 1 — VM Boot Time (IaaS)
+- 20 × AWS EC2 t3.micro vs 20 × Azure Standard_D2s_v3
+- Both Windows and Linux variants
+- Raw data: [`04_Experimental_Data/EC2_Instance_Log_v5.xlsx`](04_Experimental_Data/EC2_Instance_Log_v5.xlsx)
+
+### Experiment 2 — Serverless Cold Start & Cost (FaaS)
+- 10 × AWS Lambda vs 10 × Azure Functions
+- 6 runtimes: Node.js, Python, Java, .NET, Go, Ruby
+- Raw data: [`04_Experimental_Data/Lambda_vs_AzureFunctions_Eval.xlsx`](04_Experimental_Data/Lambda_vs_AzureFunctions_Eval.xlsx)
+
+### Experiment 3 — Kubernetes Provisioning (CaaS)
+- 10 × AWS EKS vs 10 × Azure AKS clusters (K8s v1.34)
+- Raw data: [`04_Experimental_Data/Cluster_Eval_EKS_vs_AKS.xlsx`](04_Experimental_Data/Cluster_Eval_EKS_vs_AKS.xlsx)
 
 ---
 
-## Reproduce the Experiments
+## 📁 Repository Structure
 
-All experiments were run using free-tier / pay-as-you-go AWS and Azure accounts via CLI.  
-No special access required. See `06_Supporting_Documents/` for step-by-step guides.
+```
+AWS-vs-Azure-Comparative-Analysis/
+├── 02_Presentation/
+│   └── Examiner_Cheat_Sheet.html     # Quick reference summary
+├── 04_Experimental_Data/
+│   ├── EC2_Instance_Log_v5.xlsx      # VM boot time raw data (20 runs each)
+│   ├── Lambda_vs_AzureFunctions_Eval.xlsx  # Serverless raw data
+│   └── Cluster_Eval_EKS_vs_AKS.xlsx # Kubernetes raw data
+├── 05_References/
+│   └── ref1 to ref18 *.txt / *.pdf  # 18 cited papers
+└── 08_Session_Summary/
+    ├── Session_Summary.md            # Full methodology notes
+    └── AWS_Azure_Cleanup_Commands.md # CLI commands used
+```
 
-**AWS services used:** EC2, Lambda, EKS, CloudWatch  
-**Azure services used:** Virtual Machines, Azure Functions, AKS, Monitor
+---
+
+## 🔁 Reproduce the Experiments
+
+```bash
+# AWS CLI setup
+aws configure
+# Enter your Access Key, Secret, region (us-east-1 or ap-south-1)
+
+# Azure CLI setup
+az login
+az account set --subscription YOUR_SUBSCRIPTION_ID
+```
+
+Full CLI commands in [`08_Session_Summary/AWS_Azure_Cleanup_Commands.md`](08_Session_Summary/AWS_Azure_Cleanup_Commands.md)
+
+---
+
+## 🎓 Use Cases
+
+- ✅ Cloud computing research reference
+- ✅ Final year project comparison data
+- ✅ Architecture decision: AWS vs Azure
+- ✅ Teaching material for cloud courses
+
+---
+
+## 📄 License
+
+[MIT](LICENSE) — data and code free to use for research and education.
